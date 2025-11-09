@@ -1,0 +1,177 @@
+/* Centurion University Timetable System - Premium Professional Styling */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Typography and General Styling */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Header and Footer Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.5s ease-out;
+}
+
+/* Button Hover Effects - Premium */
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Form Inputs - High Contrast */
+input, textarea, select {
+  transition: all 0.3s ease;
+  font-weight: 700;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  border: 2px solid #3b82f6;
+}
+
+input:focus, textarea:focus, select:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+  border-color: #2563eb;
+}
+
+/* Card Hover Effect - High Contrast */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Centurion University High Contrast Blue & White Branding Colors */
+:root {
+  --cu-primary: #3b82f6;
+  --cu-secondary: #60a5fa;
+  --cu-accent: #0ea5e9;
+  --cu-dark: #1a1a1a;
+  --cu-light: #ffffff;
+  --cu-text: #1a1a1a;
+  --cu-text-light: #4b5563;
+}
+
+/* Custom Scrollbar - Light Theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(220, 220, 220, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* Light Theme Text Utility Classes */
+.text-dark-strong {
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.text-dark-bold {
+  color: #1f2937;
+  font-weight: 800;
+}
+
+.text-dark-medium {
+  color: #374151;
+  font-weight: 700;
+}
+
+.text-dark-light {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Background Gradients - Light Theme */
+.bg-gradient-light {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f0f4f8 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  header, footer, button {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: #1f2937;
+  }
+}
+
+
