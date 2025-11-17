@@ -118,7 +118,7 @@ const ClassSubjectsConfig = ({
           const totalPeriodsPerWeek = cls.workingDays * cls.periodsPerDay;
           return (
             <div key={clIdx} className="bg-white rounded-lg p-4 mb-2 border border-teal-200/50 shadow-sm">
-              <h4 className="font-medium mb-2 text-white">{cls.name}</h4>
+              <h4 className="font-medium mb-2 text-teal-900">{cls.name}</h4>
               <div className="text-sm text-gray-700 font-semibold mb-3">
                 {cls.workingDays} days × {cls.periodsPerDay} periods = {totalPeriodsPerWeek} total periods/week 
                 <br />
@@ -133,13 +133,13 @@ const ClassSubjectsConfig = ({
               <table className="min-w-full text-sm border shadow-sm bg-white">
                 <thead>
                   <tr className="bg-gradient-to-r from-teal-100 to-purple-100">
-                    <th className="px-2 py-2 text-white font-semibold text-left">Subject</th>
-                    <th className="px-2 py-2 text-white font-semibold text-left">Teacher (Total)</th>
-                    <th className="px-2 py-2 text-white font-semibold text-left">Code</th>
-                    <th className="px-2 py-2 text-white font-semibold text-left">Period Type</th>
-                    <th className="px-2 py-2 text-white font-semibold text-left">Periods</th>
-                    <th className="px-2 py-2 text-white font-semibold text-left">Lab (Optional)</th>
-                    <th className="px-2 py-2 text-white font-semibold text-left">Combine With Classes</th>
+                    <th className="px-2 py-2 text-teal-900 font-semibold text-left">Subject</th>
+                    <th className="px-2 py-2 text-teal-900 font-semibold text-left">Teacher (Total)</th>
+                    <th className="px-2 py-2 text-teal-900 font-semibold text-left">Code</th>
+                    <th className="px-2 py-2 text-teal-900 font-semibold text-left">Period Type</th>
+                    <th className="px-2 py-2 text-teal-900 font-semibold text-left">Periods</th>
+                    <th className="px-2 py-2 text-teal-900 font-semibold text-left">Lab (Optional)</th>
+                    <th className="px-2 py-2 text-teal-900 font-semibold text-left">Combine With Classes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -173,7 +173,7 @@ const ClassSubjectsConfig = ({
                           <select
                             value={subj.periodType || 'daily'}
                             onChange={e => onEdit(clIdx, subjIdx, "periodType", e.target.value)}
-                            className="border border-slate-600 rounded px-2 py-1 bg-slate-700/50 text-white text-sm"
+                            className="border border-teal-300 rounded px-2 py-1 bg-white text-gray-800 text-sm"
                           >
                             <option value="daily">Daily</option>
                             <option value="weekly">Weekly</option>
@@ -258,7 +258,7 @@ const ClassSubjectsConfig = ({
         })}
       </div>
       <div className="flex justify-end gap-2 mt-8">
-        <Button variant="secondary" type="button" onClick={onBack} className="text-white">Back</Button>
+        <Button variant="secondary" type="button" onClick={onBack} className="text-teal-900">Back</Button>
         <Button type="button" onClick={onGenerate} disabled={isGenerationDisabled} className="bg-gradient-to-r from-teal-500 to-purple-600 hover:from-teal-600 hover:to-purple-700 text-white">Generate Timetable</Button>
       </div>
     </div>

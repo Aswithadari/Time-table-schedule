@@ -70,15 +70,15 @@ button:hover:not(:disabled) {
 input, textarea, select {
   transition: all 0.3s ease;
   font-weight: 700;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  border: 2px solid #3b82f6;
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+  border: 2px solid #10b981 !important;
 }
 
 input:focus, textarea:focus, select:focus {
   transform: scale(1.02);
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
-  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+  border-color: #059669 !important;
 }
 
 /* Card Hover Effect - High Contrast */
@@ -91,11 +91,11 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Centurion University High Contrast Blue & White Branding Colors */
+/* Centurion University High Contrast Teal & White Branding Colors */
 :root {
-  --cu-primary: #3b82f6;
-  --cu-secondary: #60a5fa;
-  --cu-accent: #0ea5e9;
+  --cu-primary: #10b981;
+  --cu-secondary: #34d399;
+  --cu-accent: #6ee7b7;
   --cu-dark: #1a1a1a;
   --cu-light: #ffffff;
   --cu-text: #1a1a1a;
@@ -113,12 +113,12 @@ input:focus, textarea:focus, select:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2563eb;
+  background: #10b981;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1d4ed8;
+  background: #059669;
 }
 
 /* Light Theme Text Utility Classes */
