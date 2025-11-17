@@ -43,9 +43,9 @@ const AutoFillPrompt = ({ onUseData, onSkip }: AutoFillPromptProps) => {
 
   return (
     <div className="max-w-2xl mx-auto mt-16">
-      <Card className="border-blue-200 bg-blue-50/50">
+      <Card className="border-teal-200 bg-teal-50/50">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-blue-900">
+          <CardTitle className="flex items-center gap-2 text-teal-900">
             <Upload className="h-5 w-5" />
             Saved Data Found
           </CardTitle>

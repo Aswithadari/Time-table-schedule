@@ -117,7 +117,7 @@ const ClassSubjectsConfig = ({
         {classConfigs.map((cls, clIdx) => {
           const totalPeriodsPerWeek = cls.workingDays * cls.periodsPerDay;
           return (
-            <div key={clIdx} className="bg-slate-800/50 rounded p-4 mb-2 border border-slate-700/50">
+            <div key={clIdx} className="bg-white rounded-lg p-4 mb-2 border border-teal-200/50 shadow-sm">
               <h4 className="font-medium mb-2 text-white">{cls.name}</h4>
               <div className="text-sm text-gray-700 font-semibold mb-3">
                 {cls.workingDays} days × {cls.periodsPerDay} periods = {totalPeriodsPerWeek} total periods/week 
@@ -130,9 +130,9 @@ const ClassSubjectsConfig = ({
                   <AlertDescription>{validationErrors[cls.name]}</AlertDescription>
                 </Alert>
               )}
-              <table className="min-w-full text-sm border shadow bg-slate-900/50">
+              <table className="min-w-full text-sm border shadow-sm bg-white">
                 <thead>
-                  <tr className="bg-slate-800/70">
+                  <tr className="bg-gradient-to-r from-teal-100 to-purple-100">
                     <th className="px-2 py-2 text-white font-semibold text-left">Subject</th>
                     <th className="px-2 py-2 text-white font-semibold text-left">Teacher (Total)</th>
                     <th className="px-2 py-2 text-white font-semibold text-left">Code</th>
@@ -147,10 +147,10 @@ const ClassSubjectsConfig = ({
                     const combinableClasses = getCombinableClasses(clIdx, subj);
                     const selectedCombineClasses = subj.combineWithClasses || [];
                     return (
-                      <tr key={subjIdx} className="border-t border-slate-700/30 hover:bg-slate-800/30">
+                      <tr key={subjIdx} className="border-t border-gray-200 hover:bg-teal-50/40">
                         <td className="px-2 py-2">
                           <input
-                            className="border border-slate-600 rounded px-2 py-1 min-w-[100px] bg-slate-700/50 text-white placeholder-slate-400"
+                            className="border border-teal-300 rounded px-2 py-1 min-w-[100px] bg-white text-gray-800 placeholder-gray-400"
                             value={subj.name}
                             onChange={e => onEdit(clIdx, subjIdx, "name", e.target.value)}
                             placeholder="Subject name"
@@ -163,7 +163,7 @@ const ClassSubjectsConfig = ({
                         </td>
                         <td className="px-2 py-2">
                           <input
-                            className="border border-slate-600 rounded px-2 py-1 min-w-[70px] bg-slate-700/50 text-white placeholder-slate-400"
+                            className="border border-teal-300 rounded px-2 py-1 min-w-[70px] bg-white text-gray-800 placeholder-gray-400"
                             value={subj.code}
                             onChange={e => onEdit(clIdx, subjIdx, "code", e.target.value)}
                             placeholder="Code"
@@ -185,7 +185,7 @@ const ClassSubjectsConfig = ({
                             <input
                               type="number"
                               min={1}
-                              className="border border-slate-600 rounded px-2 py-1 w-16 bg-slate-700/50 text-white placeholder-slate-400"
+                              className="border border-teal-300 rounded px-2 py-1 w-16 bg-white text-gray-800 placeholder-gray-400"
                               value={subj.periods}
                               onChange={e => onEdit(clIdx, subjIdx, "periods", +e.target.value)}
                             />
@@ -222,7 +222,7 @@ const ClassSubjectsConfig = ({
                                 <div className="text-xs text-gray-700 font-semibold">Select classes to combine with:</div>
                                 <div className="flex flex-wrap gap-1">
                                   {combinableClasses.map(className => (
-                                    <label key={className} className="flex items-center gap-1 text-xs bg-slate-700/50 px-2 py-1 rounded border border-slate-600 hover:bg-slate-700">
+                                    <label key={className} className="flex items-center gap-1 text-xs bg-purple-50 px-2 py-1 rounded border border-purple-200 hover:bg-purple-100 text-gray-700">
                                       <input
                                         type="checkbox"
                                         checked={selectedCombineClasses.includes(className)}
@@ -259,7 +259,7 @@ const ClassSubjectsConfig = ({
       </div>
       <div className="flex justify-end gap-2 mt-8">
         <Button variant="secondary" type="button" onClick={onBack} className="text-white">Back</Button>
-        <Button type="button" onClick={onGenerate} disabled={isGenerationDisabled} className="bg-blue-600 hover:bg-blue-700 text-white">Generate Timetable</Button>
+        <Button type="button" onClick={onGenerate} disabled={isGenerationDisabled} className="bg-gradient-to-r from-teal-500 to-purple-600 hover:from-teal-600 hover:to-purple-700 text-white">Generate Timetable</Button>
       </div>
     </div>
   );

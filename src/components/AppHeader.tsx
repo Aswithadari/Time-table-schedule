@@ -8,36 +8,38 @@ type AppHeaderProps = {
 
 const AppHeader = ({ step, onRestart }: AppHeaderProps) => {
   return (
-    <header className="w-full glass border-b border-border/50 z-20 shadow-elegant sticky top-0 animate-fade-in bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-screen-2xl mx-auto flex items-center justify-between px-6 py-4">
-        <div className="flex gap-4 items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg border border-blue-400/30">
-              <span className="text-2xl font-bold text-white">CU</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg tracking-tight text-white">Centurion University</span>
-              <span className="text-xs text-blue-200 font-medium">Class Schedule Management System</span>
-            </div>
+    <header className="w-full z-20 shadow-elegant sticky top-0 animate-fade-in bg-gradient-to-r from-teal-600 via-purple-600 to-purple-700 border-b border-purple-700/30">
+      <div className="max-w-screen-2xl mx-auto app-header-compact bg-transparent">
+        <div className="flex items-center gap-4">
+          <div className="w-11 h-11 rounded-lg bg-white/20 backdrop-blur-md flex items-center justify-center shadow-lg border border-white/30">
+            <span className="text-lg font-bold text-white">CU</span>
           </div>
-          <div className="hidden md:flex gap-2">
-            <span className="text-xs px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full font-semibold border border-blue-500/40">
+          <div className="hidden sm:flex flex-col">
+            <span className="font-bold text-base tracking-tight text-white">Centurion University</span>
+            <span className="text-xs text-white/80 font-medium">Timetable Scheduler</span>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2">
+            <span className="text-xs px-3 py-1 bg-white/15 text-white rounded-full font-semibold border border-white/30 backdrop-blur-sm">
               Administration
             </span>
-            <span className="text-xs px-3 py-1 bg-green-500/20 text-green-200 rounded-full font-semibold border border-green-500/40">
+            <span className="text-xs px-3 py-1 bg-green-300/20 text-green-50 rounded-full font-semibold border border-green-300/30 backdrop-blur-sm">
               Active
             </span>
           </div>
+
+          {step === "view" && (
+            <Button 
+              variant="outline" 
+              onClick={onRestart}
+              className="border-white/40 hover:bg-white/20 text-white transition-smooth backdrop-blur-sm"
+            >
+              Exit
+            </Button>
+          )}
         </div>
-        {step === "view" && (
-          <Button 
-            variant="outline" 
-            onClick={onRestart}
-            className="glass border-blue-400/30 hover:bg-blue-500/20 text-blue-100 hover:text-blue-50 transition-smooth"
-          >
-            Exit & Logout
-          </Button>
-        )}
       </div>
     </header>
   );

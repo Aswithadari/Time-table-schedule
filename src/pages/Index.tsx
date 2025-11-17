@@ -26,11 +26,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen w-full text-foreground flex flex-col bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen w-full text-foreground flex flex-col bg-gradient-to-br from-purple-50 via-teal-50 to-purple-100">
       {/* Background decorative elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-1/3 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 left-1/4 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-1/3 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 left-1/4 w-80 h-80 bg-purple-400/8 rounded-full blur-3xl"></div>
       </div>
 
       <AppHeader step={currentStep} onRestart={handleRestart} />

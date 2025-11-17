@@ -174,4 +174,46 @@ input:focus, textarea:focus, select:focus {
   }
 }
 
+/* Component utilities for new layout */
+.btn-flat {
+  background: transparent;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.btn-primary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+}
+
+.card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 0.25rem);
+  padding: 16px;
+}
+
+.sidebar-compact {
+  width: 220px;
+}
+
+.content-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+}
+
+.centered-help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  color: hsl(var(--muted-foreground));
+}
+
 

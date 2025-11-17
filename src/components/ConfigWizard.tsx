@@ -491,8 +491,8 @@ const ConfigWizard = ({ facultyData, onConfigDone, onBack }: ConfigWizardProps) 
   return (
     <div className="max-w-4xl mx-auto mt-10 bg-card rounded-xl p-8 shadow border">
       {regenerationCount > 0 && (
-        <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded">
-          <p className="text-sm text-blue-700">
+        <div className="mb-4 p-3 bg-purple-50 border border-purple-200 rounded">
+          <p className="text-sm text-purple-700">
             Regeneration attempt: {regenerationCount}/50
             {lastGenerationErrors.length > 0 && (
               <span className="block mt-1 text-xs">

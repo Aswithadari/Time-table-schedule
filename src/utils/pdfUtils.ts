@@ -167,7 +167,7 @@ export const generateEnhancedPDF = (
       
       // Set background color
       if (isTimeSlot) {
-        doc.setFillColor("#dbeafe"); // blue-100
+        doc.setFillColor("#ede9fe"); // purple-100 (theme adjusted)
       } else if (isBreakLunch) {
         doc.setFillColor("#fed7aa"); // orange-200
       } else {

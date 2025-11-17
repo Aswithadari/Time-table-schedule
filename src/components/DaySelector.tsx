@@ -54,7 +54,7 @@ const DaySelector = ({ selectedDays, onDaysChange, className }: DaySelectorProps
         <Button
           type="button"
           onClick={select5DayWeek}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+          className="bg-gradient-to-r from-teal-500 to-purple-600 hover:from-teal-600 hover:to-purple-700 text-white font-semibold"
           title="Select 5-day week (Mon-Fri)"
         >
           5 Days (Mon-Fri)
@@ -62,7 +62,7 @@ const DaySelector = ({ selectedDays, onDaysChange, className }: DaySelectorProps
         <Button
           type="button"
           onClick={select6DayWeek}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+          className="bg-gradient-to-r from-teal-500 to-purple-600 hover:from-teal-600 hover:to-purple-700 text-white font-semibold"
           title="Select 6-day week (Mon-Sat)"
         >
           6 Days (Mon-Sat)
@@ -94,7 +94,7 @@ const DaySelector = ({ selectedDays, onDaysChange, className }: DaySelectorProps
       </div>
       
       <div className="text-sm text-gray-700 font-semibold mt-3">
-        Selected: <span className="text-blue-600 font-bold">{selectedDays.length}</span> days
+        Selected: <span className="text-teal-600 font-bold">{selectedDays.length}</span> days
         {selectedDays.length > 0 && (
           <div className="text-xs text-gray-600 mt-1">
             {selectedDays.map(d => DAYS_OF_WEEK.find(day => day.value === d)?.label).join(', ')}

@@ -596,7 +596,7 @@ const TimetableTabs = ({ timetables, onRestart, config, facultyData, labResource
       <div className="w-full">
         {/* Remove error display from main screen - only show regeneration status */}
         {isRegenerating && (
-        <Alert className="mb-4 border-blue-200 bg-blue-50">
+        <Alert className="mb-4 border-teal-200 bg-teal-50">
           <Clock className="h-4 w-4" />
           <AlertTitle>Regenerating Timetables</AlertTitle>
           <AlertDescription>
